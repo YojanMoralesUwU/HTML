@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+ background: rgb(251, 239, 252);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+}
+.post{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.post .paracaseizquierdo{
+    position: relative;
+    background: rgb(159, 189, 230);
+    padding: 40px;
+}
+.textoInicial{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(29, 29, 29, 0.2);
+}
+.textoInicial .imagenPerfil{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.textoInicial .imagenPerfil img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textoInicial h2{
+    color: rgb(49, 49, 49);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.textoInicial h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+    
+}
+.contactoAyuda{
+    padding-top: 40px;
+}
+.titulo{
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;    
+}
+.contactoAyuda ul{
+    position: relative;    
+}
+.contactoAyuda ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactoAyuda ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgb(135, 101, 255);
+}
+.contactoAyuda ul li span{
+    color: rgb(49, 49, 49);
+    font-weight: 300;
+}
+.contactoAyuda.estudios li{
+    margin-bottom: 15px;
+}
+.contactoAyuda.estudios h5{
+    color: blueviolet;
+    font-weight: 500;
+}
+.contactoAyuda.estudios h3:nth-child(2){
+    color: rgb(49, 49, 49);
+    font-weight: 500;
+}
+.contactoAyuda.estudios h4{
+    color: rgb(49, 49, 49);
+    font-weight: 300;
+}
+.contactoAyuda.idiomas .percent{
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(255, 255, 255);
+    display: block;
+}
+.contactoAyuda.idiomas .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(113, 52, 170);
+}
+.post .paracasederecho{
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+}
+.sobremi{
+    margin-bottom: 50px;
+}
+.sobremi:last-child{
+    margin-bottom: 0;
+}
+.titulo2{
+    color: rgb(90, 135, 197);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+.sobremi .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;    
+}
+.sobremi .box .year_company{
+    min-width: 150px;
+
+}
+.sobremi .box .year_company h5{
+    text-transform: uppercase;
+    color: #5f5f5f;
+    margin-right: 10px;
+    font-weight: 600;
+}
+.sobremi .box .texto h4{
+    text-transform: uppercase;
+    color: rgb(135, 174, 228);
+    font-size: 16px;
+}
+.habilidades .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+}
+.habilidades .box h4{
+    text-transform: uppercase;
+    color: #5f5f5f;
+    font-weight: 500;
+}
+.habilidades .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #c7c7c7;
+}
+.habilidades .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(135, 101, 255);
+}
+.intereses ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.intereses ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.intereses ul li .fa{
+    color: blueviolet;
+    font-size: 18px;
+    width: 20px ;
+}
+@media(max-width: 1000px){
+    .post{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .intereses ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 600px){
+    .sobremi .box {
+        flex-direction: column;
+    }
+    .sobremi .box .year_company{
+        margin-bottom: 5px;
+    }
+    .intereses ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .habilidades .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+
+
+/*Barra lateral*/
+#btn-menu{
+	display: none;
+    
+}
+.container-menu{
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100vh;
+	top: 0;right: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+	opacity: 1;
+	visibility: visible;
+}
+.cont-menu{
+	width: 100%;
+	max-width: 250px;
+	background: #1c1c1c;
+	height: 100vh;
+	position: relative;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+.btn-menu{
+    font-size: 100px;
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+	transform: translateX(0%);
+}
+.cont-menu nav{
+	transform: translateY(15%);
+}
+.cont-menu nav a{
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: #c7c7c7;
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+	border-left: 5px solid #c7c7c7;
+	background: #1f1f1f;
+}
+.cont-menu label{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+}
