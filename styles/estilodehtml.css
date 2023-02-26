@@ -11,6 +11,10 @@ body{
  align-items: center;
  min-height: 100vh;
 }
+.primerTexto{
+    margin-top: 0%;
+
+}
 .post{
     position: relative;
     width: 100%;
@@ -228,9 +232,6 @@ p{
 }
 
 
-
-
-
 /*Barra lateral*/
 #btn-menu{
 	display: none;
@@ -252,9 +253,9 @@ p{
 }
 .cont-menu{
 	width: 100%;
-	max-width: 250px;
+	max-width: 502px;
 	background: #1c1c1c;
-	height: 100vh;
+	height: 10vh;
 	position: relative;
 	transition: all 500ms ease;
 	transform: translateX(-100%);
@@ -288,7 +289,147 @@ p{
 	cursor: pointer;
 	font-size: 18px;
 }
-body::-webkit-scrollbar{
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nombre img{
+    object-fit: contain;
+    width:190px;
+    height:30%;
+  }
+
+
+body{
+    font-family: 'open sans';
+    position: absolute;
+    width: 100%;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+.capsula{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #000000;
+    font-size: 35px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    background-color: #000000;
+    color: #fff;
+}
+
+nav a{
+      display: block;
+      position: relative;
+      color: white;
+      text-align: center;
+      font-size: 25px;
+      padding: 25px 15px;
+      text-decoration: none;
+}
+
+a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ec46c8;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+  
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+  
+.nav-links li {
+    list-style: none;
+}
+  
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+  
+.burger {
+    display: none;
+    cursor: pointer;
+}
+  
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+  
+@media screen and (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+}
+  
+.nav-links li {
+      opacity: 0;
+}
+  
+.burger {
+      display: block;
+    }
+}
+  
+.nav-active {
+    transform: translateX(0%);
+}
+  
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+
+
+  body::-webkit-scrollbar{
     width: 5px;
     background:#000000 ;
   }
